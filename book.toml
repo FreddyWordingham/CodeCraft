@@ -1,0 +1,6 @@
+[book]
+authors = ["Freddy Wordingham <freddy@digilab.co.uk>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Code Craft: Navigating the Art and Science of Software Engineering"
