@@ -1,6 +1,5 @@
-# Summary
+# 🔖 Table of Contents
 
--   [🔖 Contents](./contents.md)
 -   [🌟 Introduction](./introduction.md)
 -   [📚 Rules to Live By](./rules_to_live_by.md)
 -   [📜 The History of Language](./history_of_language.md)
