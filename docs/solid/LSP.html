@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>🔄 Liskov Substitution Principle (LSP) - Code Craft: Navigating the Art and Science of Software Engineering</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../contents.html"><strong aria-hidden="true">1.</strong> 🔖 Contents</a></li><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">2.</strong> 🌟 Introduction</a></li><li class="chapter-item expanded "><a href="../rules_to_live_by.html"><strong aria-hidden="true">3.</strong> 📚 Rules to Live By</a></li><li class="chapter-item expanded "><a href="../history_of_language.html"><strong aria-hidden="true">4.</strong> 📜 The History of Language</a></li><li class="chapter-item expanded "><a href="../paradigms.html"><strong aria-hidden="true">5.</strong> 🧠 Paradigms</a></li><li class="chapter-item expanded "><a href="../unix_philosophy.html"><strong aria-hidden="true">6.</strong> 💻 The Unix Philosophy</a></li><li class="chapter-item expanded "><a href="../Undecidability.html"><strong aria-hidden="true">7.</strong> ❓ Undecidability</a></li><li class="chapter-item expanded "><a href="../solid.html"><strong aria-hidden="true">8.</strong> 🛠️ SOLID Principles</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../solid/SRP.html"><strong aria-hidden="true">8.1.</strong> 👤 Single Responsibility Principle (SRP)</a></li><li class="chapter-item expanded "><a href="../solid/OCP.html"><strong aria-hidden="true">8.2.</strong> 🔒 Open/Closed Principle (OCP)</a></li><li class="chapter-item expanded "><a href="../solid/LSP.html" class="active"><strong aria-hidden="true">8.3.</strong> 🔄 Liskov Substitution Principle (LSP)</a></li><li class="chapter-item expanded "><a href="../solid/ISP.html"><strong aria-hidden="true">8.4.</strong> 🔌 Interface Segregation Principle (ISP)</a></li><li class="chapter-item expanded "><a href="../solid/DIP.html"><strong aria-hidden="true">8.5.</strong> 🔝 Dependency Inversion Principle (DIP)</a></li></ol></li><li class="chapter-item expanded "><a href="../types.html"><strong aria-hidden="true">9.</strong> 🔣 Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../types/primitives.html"><strong aria-hidden="true">9.1.</strong> Primitives</a></li><li class="chapter-item expanded "><a href="../types/type_aliases.html"><strong aria-hidden="true">9.2.</strong> Type Aliases</a></li><li class="chapter-item expanded "><a href="../types/enums.html"><strong aria-hidden="true">9.3.</strong> Enums</a></li><li class="chapter-item expanded "><a href="../types/unions.html"><strong aria-hidden="true">9.4.</strong> Unions</a></li><li class="chapter-item expanded "><a href="../types/structs.html"><strong aria-hidden="true">9.5.</strong> Structs</a></li><li class="chapter-item expanded "><a href="../types/tuples.html"><strong aria-hidden="true">9.6.</strong> Tuples</a></li><li class="chapter-item expanded "><a href="../types/functions.html"><strong aria-hidden="true">9.7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../types/classes.html"><strong aria-hidden="true">9.8.</strong> Classes</a></li><li class="chapter-item expanded "><a href="../types/objects.html"><strong aria-hidden="true">9.9.</strong> Objects</a></li><li class="chapter-item expanded "><a href="../types/interfaces.html"><strong aria-hidden="true">9.10.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="../types/extensions.html"><strong aria-hidden="true">9.11.</strong> Extensions</a></li><li class="chapter-item expanded "><a href="../types/traits.html"><strong aria-hidden="true">9.12.</strong> Traits</a></li><li class="chapter-item expanded "><a href="../types/records.html"><strong aria-hidden="true">9.13.</strong> Records</a></li><li class="chapter-item expanded "><a href="../types/generics.html"><strong aria-hidden="true">9.14.</strong> Generics</a></li><li class="chapter-item expanded "><a href="../types/macros.html"><strong aria-hidden="true">9.15.</strong> Macros</a></li><li class="chapter-item expanded "><a href="../types/delegates.html"><strong aria-hidden="true">9.16.</strong> Delegates</a></li><li class="chapter-item expanded "><a href="../types/anonymous_types.html"><strong aria-hidden="true">9.17.</strong> Anonymous Types</a></li><li class="chapter-item expanded "><a href="../types/anonymous_functions.html"><strong aria-hidden="true">9.18.</strong> Anonymous Functions</a></li></ol></li><li class="chapter-item expanded "><a href="../object_orientated_programming.html"><strong aria-hidden="true">10.</strong> 🎁 Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="../concurrency_parallelism.html"><strong aria-hidden="true">11.</strong> ⏱️ Concurrency and Parallelism</a></li><li class="chapter-item expanded "><a href="../database_design_management.html"><strong aria-hidden="true">12.</strong> 🗃️ Database Design and Management</a></li><li class="chapter-item expanded "><a href="../networks_protocols.html"><strong aria-hidden="true">13.</strong> 🌐 Networks and Protocols</a></li><li class="chapter-item expanded "><a href="../machine_learning_essentials.html"><strong aria-hidden="true">14.</strong> 🤖 Machine Learning Essentials</a></li><li class="chapter-item expanded "><a href="../microservices_architecture.html"><strong aria-hidden="true">15.</strong> 🏗️ Microservices Architecture</a></li><li class="chapter-item expanded "><a href="../security_software_development.html"><strong aria-hidden="true">16.</strong> 🔒 Security in Software Development</a></li><li class="chapter-item expanded "><a href="../devops_continuous_integration.html"><strong aria-hidden="true">17.</strong> 🔄 DevOps and Continuous Integration</a></li><li class="chapter-item expanded "><a href="../software_testing_qa.html"><strong aria-hidden="true">18.</strong> ✔️ Software Testing and Quality Assurance</a></li><li class="chapter-item expanded "><a href="../emerging_technologies_computing.html"><strong aria-hidden="true">19.</strong> 🌈 Emerging Technologies in Computing</a></li><li class="chapter-item expanded "><a href="../conclusion.html"><strong aria-hidden="true">20.</strong> 🎉 Conclusion</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Code Craft: Navigating the Art and Science of Software Engineering</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="-liskov-substitution-principle"><a class="header" href="#-liskov-substitution-principle">🔄 Liskov Substitution Principle</a></h1>
+<p>The Liskov substitution principle states that objects in a program should be replaceable with instances of their subtypes without altering the correctness of the program.</p>
+<p>This principle is often misunderstood, and it is easy to fall into the trap of thinking that it is about inheritance.
+The Liskov substitution principle is not about inheritance, but rather about the behavior of subtypes.</p>
+<blockquote>
+<p>Liskov is named after Barbara Liskov, who first wrote about it in a 1987 conference keynote address titled Data abstraction and hierarchy.
+She based it on the earlier work of Jeannette Wing, who wrote about it in a 1980 paper titled A notion of correctness for object-oriented programs.
+Barbara Liskov and Jeannette Wing are two of the most influential computer scientists of all time, and they are both still alive today.
+They are both professors at MIT, and they are both still actively involved in research.
+In 1968 Barbara became one of the first women in the United States to be awarded a computer science PhD.
+Her thesis on chess end-games was supervised by John McCarthy.
+Barbara Liskov won the Turing Award in 2008, and Jeannette Wing won the Dijkstra Prize in 2011.</p>
+</blockquote>
+<h2 id="bad-example-not-following-lsp"><a class="header" href="#bad-example-not-following-lsp">Bad Example: Not Following LSP</a></h2>
+<p>Let's continue with the Shape example from the previous section.
+Imagine that we want to add a Square class that extends the Rectangle class.</p>
+<pre><code class="language-python">class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
+
+    def set_width(self, width):
+        self.width = self.length = width
+
+    def set_length(self, length):
+        self.length = self.width = length
+
+# Usage
+def process_shape(r: Rectangle):
+    r.set_width(10)
+    return r.area()
+
+square = Square(5)
+print(&quot;Expected area of 5x10 square:&quot;, process_shape(square))  # Incorrectly returns 100
+</code></pre>
+<p>This is bad because changing the width of a Square changes its length too, which is unexpected for a Rectangle.
+It breaks the LSP as Square cannot be substituted for Rectangle without altering the program's behavior.</p>
+<h2 id="good-example-following-lsp"><a class="header" href="#good-example-following-lsp">Good Example: Following LSP</a></h2>
+<p>Instead of inheritance, use a common interface or separate classes for shapes that don't share properties.</p>
+<pre><code class="language-python">class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    # Same as before
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+# Usage remains the same
+</code></pre>
+<p>In this design, Square and Rectangle are separate entities
+There's no unexpected behavior when a Square is used in place of a Rectangle because they are not interchangeable, adhering to LSP.</p>
+<h2 id="recap"><a class="header" href="#recap">Recap</a></h2>
+<ul>
+<li>In the <strong>bad example</strong>, Square extending Rectangle leads to a violation of LSP.
+It's tempting to use inheritance here because a square is a special kind of rectangle, but this relationship doesn't hold up in code when their behaviors (like setting width or length) differ.
+When a Square object replaces a Rectangle object, it breaks the expectations of how a Rectangle should behave, specifically in the process_shape function.</li>
+<li>The <strong>good example</strong> correctly addresses this by treating Square and Rectangle as separate entities that both implement a common Shape interface.
+This approach respects LSP, as each class can be substituted for a Shape without changing the correctness of the program.
+Here, there's no assumption or requirement that a Square must behave like a Rectangle.</li>
+</ul>
+<p>A few key takeaways about LSP:</p>
+<ul>
+<li><strong>Behavioral Subtyping</strong>: LSP is essentially about behavioral subtyping.
+Subtypes should be able to replace their base types without altering the desired behavior of the program.</li>
+<li><strong>Design Thoughtfulness</strong>: It encourages careful thought when using inheritance.
+Not all &quot;is-a&quot; relationships in the real world translate well to code.</li>
+<li><strong>Robustness</strong>: Adhering to LSP leads to more robust and flexible code, where components can be easily interchanged without causing issues.</li>
+</ul>
+<p>Implementing LSP properly often leads to better abstraction in our code, allowing for more flexible and reusable components.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../solid/OCP.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../solid/ISP.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../solid/OCP.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../solid/ISP.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
