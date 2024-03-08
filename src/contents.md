@@ -1,8 +1,8 @@
 ## By Freddy Wordingham and Will Denby
 
-This book is designed to serve as a primer and reference guide for professional software engineers and incidental programmers, whether new or experienced. Throughout the book, we typically use Python for our examples, in an attempt to maximise accessibility. 
+CodeCraft is about the science and art of writing good code. The former, because you need knowledge about the various data types, design principles, and paradigms. The latter, because you need to make careful, sometimes difficult, decisions about how, when, and why to use them. 
 
-Python is a high-level, general-purpose programming language, which has:
+We've written CodeCraft to serve as both a primer and a reference guide. Throughout the book, we typically use Python for our examples, in an attempt to maximise accessibility. This is because Python is a high-level, general-purpose programming language, with:
 
 - An emphasis on code readability;
 - A rich, “batteries included” library;
