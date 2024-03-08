@@ -2,13 +2,13 @@
 
 Good code is a science, because you need knowledge about the various data types, design principles, and paradigms. Good code is an art, because you need to make careful, sometimes difficult, decisions about how to use them. 
 
-We've written CodeCraft to serve as both a primer and a reference guide. Throughout the book, we typically use Python for our examples, in an attempt to maximise accessibility. This is because Python is a high-level, general-purpose programming language, with:
+We've written CodeCraft to serve as both a primer and a reference guide. Throughout the book, we typically use Python for our examples, in an attempt to maximise accessibility. This is because Python is a high-level, general-purpose programming language which:
 
-- An emphasis on code readability;
-- A rich, “batteries included” library;
-- The ability to support various programming paradigms;
-- A thriving community ecosystem of open-source packages;
-- Extensive usage across a wide variety of domains, from the scientific to the commercial to the casual.
+- Emphasises code readability.
+- Has a rich, “batteries included” standard library.
+- Supports various programming paradigms.
+- Enjoys a thriving ecosystem of open-source packages.
+- Is widely used across scientific, commercial, and casual domains.
 
 # 🔖 Table of Contents
 
