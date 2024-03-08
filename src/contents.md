@@ -1,3 +1,15 @@
+## By Freddy Wordingham and Will Denby
+
+This book is designed to serve as a primer and reference guide for professional software engineers and incidental programmers, whether new or experienced. Throughout the book, we typically use Python for our examples, in an attempt to maximise accessibility. 
+
+Python is a high-level, general-purpose programming language, which has:
+
+- An emphasis on code readability;
+- A rich, “batteries included” library;
+- The ability to support various programming paradigms;
+- A thriving community ecosystem of open-source packages;
+- Extensive usage across a wide variety of domains, from the scientific to the commercial to the casual.
+
 # 🔖 Table of Contents
 
 - [🌟 Introduction](./introduction.md)
