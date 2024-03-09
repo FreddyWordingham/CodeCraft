@@ -1,30 +1,26 @@
 # Paradigms
 
-All programming languages are Turing complete, meaning they can be used to solve any problem that can be solved by a computer.
-However, some languages are better suited to certain tasks than others.
-This is because each language is designed with a specific paradigm in mind.
+A "true" programming language is Turing complete, meaning that it can be used to solve any problem that can be solved by a computer. However, some languages are better suited to certain tasks than others. This is because each language is designed with a specific paradigm in mind.
 
-A programming paradigm is a style or way of thinking about programming.
-It's not a specific language feature or syntax, but rather a way of approaching software design.
-A paradigm is a set of rules and regulations that define how a programmer can build a program to solve a problem.
+A programming paradigm is a style or way of thinking about programming. It's not a specific language feature or syntax, but rather a way of approaching software design. A paradigm is a set of rules and regulations that define how a programmer can build a program to solve a problem.
 
 ## Table of Contents
 
--   [Paradigms](#paradigms)
-    -   [Table of Contents](#table-of-contents)
-    -   [Imperative Programming](#imperative-programming)
-    -   [Procedural Programming](#procedural-programming)
-    -   [Functional Programming](#functional-programming)
-    -   [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-    -   [Structured Programming](#structured-programming)
-    -   [Logic Programming](#logic-programming)
-    -   [Declarative Programming](#declarative-programming)
-    -   [Concurrent Programming](#concurrent-programming)
-    -   [Event-Driven Programming](#event-driven-programming)
-    -   [Reflective Programming](#reflective-programming)
-    -   [Aspect-Oriented Programming (AOP)](#aspect-oriented-programming-aop)
-    -   [Generic Programming](#generic-programming)
-    -   [Metaprogramming](#metaprogramming)
+- [Paradigms](#paradigms)
+  - [Table of Contents](#table-of-contents)
+  - [Imperative Programming](#imperative-programming)
+  - [Procedural Programming](#procedural-programming)
+  - [Functional Programming](#functional-programming)
+  - [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
+  - [Structured Programming](#structured-programming)
+  - [Logic Programming](#logic-programming)
+  - [Declarative Programming](#declarative-programming)
+  - [Concurrent Programming](#concurrent-programming)
+  - [Event-Driven Programming](#event-driven-programming)
+  - [Reflective Programming](#reflective-programming)
+  - [Aspect-Oriented Programming (AOP)](#aspect-oriented-programming-aop)
+  - [Generic Programming](#generic-programming)
+  - [Metaprogramming](#metaprogramming)
 
 ## Imperative Programming
 
@@ -74,7 +70,7 @@ applyFunctionToList(x => x * 2, [1, 2, 3])
 Functional programming is a paradigm where programs are constructed by applying and composing functions. It emphasizes the use of pure functions, which avoid shared state and mutable data.
 In functional programming, the output value of a function depends only on its arguments, making it easier to predict and test.
 This paradigm is known for its expressiveness and is used in languages like Haskell and Scala.
-It's particularly suited for parallel processing and complex computations, fitting well with your interest in programming and physics.
+It's particularly suited for parallel processing and complex computations.
 
 Early Supporter: Lisp (1958). It's one of the earliest languages supporting functional programming, emphasizing functions and recursion.
 
@@ -119,7 +115,7 @@ while anotherCondition:
 Structured programming is a programming paradigm aimed at improving the clarity, quality, and development time of a computer program by making extensive use of subroutines, block structures, for and while loops, and if/then/else structures.
 It's a subset of imperative programming, focusing on linear flow and clear, structured control constructs. This approach avoids using the GOTO statement, which can lead to complex or unmanageable code.
 Structured programming makes programs easier to understand and modify, and is fundamental in languages like C and Pascal.
-As a programmer, you'd appreciate its emphasis on straightforward, maintainable code structures.
+As a programmer, you'll appreciate its emphasis on straightforward, maintainable code structures.
 
 Early Supporter: ALGOL (1958). Influenced subsequent languages like C for structured programming, focusing on clear structure and blocks.
 
