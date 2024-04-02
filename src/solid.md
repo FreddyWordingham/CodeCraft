@@ -1,6 +1,6 @@
 # 🛠️ SOLID Principles
 
-The SOLID principles are a set of principles that help us write better, more maintainable code.
+The SOLID principles are another set of principles that help us write better, more maintainable code.
 
 They were coined by Robert C. Martin (Uncle Bob) in the year 2000 in his paper [Design Principles and Design Patterns](https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf).
 
