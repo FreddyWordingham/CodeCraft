@@ -1,6 +1,6 @@
 # 🌟 Rules to Live By
 
-Here are a list of rules of thumb, heuristics, and principles that you might find useful in your career as a software developer.
+Here are some rules of thumb, heuristics, and principles that you might find useful in your career as a software developer:
 
 1. Less code is better than more code. No code is best of all.
 2. Run the code as you write it.
@@ -20,7 +20,7 @@ Every line of code you write is a line of code that can have bugs.
 Every line of code you write is a line of code that can be misunderstood and misused.
 Code is a liability, not an asset!
 
-However, also be wary of oversimplifying to the point of obfuscation.
+However, be wary of oversimplifying to the point of obfuscation.
 Sometimes, a bit more code can significantly enhance readability and maintainability.
 For instance, explicit code in Python, even if slightly longer, is often preferred over cryptic one-liners for clarity.
 
@@ -35,7 +35,7 @@ This is especially true when you're learning a new language or framework.
 But it's something you should do all the time.
 
 It's much easier to debug a small amount of code than a large amount of code.
-And it's also much easier to solve a problem while the code while it's still fresh in your brain RAM.
+And it's also much easier to solve a problem while the code is still fresh in your "brain RAM".
 
 Adopting this habit leads to a more efficient development process and helps in maintaining a clear understanding of the code's behavior at each step.
 Early and frequent testing prevents the accumulation of bugs and reduces the complexity of troubleshooting.
@@ -61,11 +61,11 @@ A better user experience probably means more code to write and maintain.
 A more portable program probably means a slower program.
 A more secure program probably means a less usable program.
 
-There is no hard and fast rule here, and are often matters of opinion that lead to heated debates.
+There is no hard and fast rule here. Often decisions involve matters of opinion that lead to heated debates.
 But it's important to remember that everything is a trade-off.
 There is no such thing as a perfect solution.
 
-In every decision, seek balance and prioritize based on the context and goals.
+In every decision, seek balance. Prioritize based on the context and goals.
 Recognizing and managing these trade-offs is a hallmark of great engineering.
 
 It's equally important to contextualize these trade-offs within the specific requirements of a project.
@@ -75,7 +75,7 @@ For instance, in high-performance computing, efficiency might take precedence ov
 
 A user will use your code in ways you never imagined, intended or wanted.
 
-It's very difficult for us as developers to image how a user with no knowledge of the internals of our code will use it.
+It's very difficult for us as developers to visualise how a user with no knowledge of the internals of our code will use it.
 Because we know how it works, we use it in exactly the way it was intended.
 
 This underscores the importance of designing with empathy and robustness.
@@ -123,7 +123,7 @@ As we become more experienced we get better at writing code, but we may also bec
 
 Always double-check and rigorously test your code, even when it seems to work perfectly.
 This practice is not about doubting your skills but ensuring quality and reliability.
-The best developers know that the devil is often in the details, and thorough validation is key.
+The best developers know that the devil is often in the details, and that thorough validation is key.
 
 # 9. Think in type systems, even when you're not programming in a typed language.
 
@@ -133,7 +133,7 @@ Whilst we won't know the specific values going through the pipe, we should still
 If we're building an API, or a library, or a framework, we should be thinking about the types of data that are going to be passed in and out of our code.
 This way other developers can write code that will interface with ours - even if it's not built yet!
 
-Considering types enhances clarity, maintainability, and interoperability of your code.
+Considering types enhances the clarity, maintainability, and interoperability of your code.
 It's about anticipating how your code interacts with other parts of the system and ensuring that these interactions are as smooth and error-free as possible.
 
 However, it's also important to leverage the strengths of dynamically typed languages where appropriate, as they can offer flexibility and speed in development.
@@ -156,23 +156,48 @@ You interpret it, and you adapt it to your own tastes.
 
 Developing algorithms is a science, developing software is an art.
 
-An algorithms objectives are usually well defined and unambiguous.
-Often maximize speed and/or minimize memory usage.
+An algorithm's objectives are usually well defined and unambiguous - often to maximize speed and/or minimize memory usage.
 
-However, a complete program often too complex to be approached in the same way.
-There are many more moving parts to consider, and the objectives are often more subjective.
+However, a complete program is often too complex to be approached in the same way.
+There are many more moving parts to consider, and the "objectives" are often more "subjective".
 
-Your role as a developer is not only to construct efficient algorithms but to sculpt a software architecture that anticipates and accommodates future changes, growth, and challenges.
+Your role as a developer is not only to construct efficient algorithms but also to sculpt a software architecture that anticipates and accommodates future changes, growth, and challenges.
 
 # Recap
 
-1.  **Less code, more impact**: Every line of code is a potential bug. Striving for simplicity is key. In Python, the Zen of Python (import this) emphasizes readability and simplicity, a testament to this principle.
+1.  **Less code, more impact**: Every line of code is a potential bug. Striving for simplicity is key. In Python, the Zen of Python[^note] emphasizes readability and simplicity, a testament to this principle.
 2.  **Iterative development**: Running code as you write is crucial. Tools like Jupyter notebooks for Python and REPL environments in languages like JavaScript foster this practice. It aligns well with the agile development approach.
 3.  **Automation is your ally**: The automation principle is a cornerstone of modern DevOps practices. Using tools like Ansible for automation, or writing custom scripts in Python, can save immense amounts of time.
 4.  **Trade-offs are everywhere**: This is a core concept in software architecture. The balance between scalability, performance, and maintainability is always a juggling act.
 5.  **Design for the user**: Understanding the user's perspective is crucial. This is where user stories and personas in agile methodologies become valuable.
 6.  **Portability vs. Efficiency**: Web technologies like React (JavaScript) and WebAssembly for more performance-intensive tasks are reshaping how we think about portable software.
 7.  **Prototype early**: MVPs (Minimum Viable Products) and rapid prototyping are vital in today's fast-paced tech environment. Tools like Flask for Python provide a quick way to get a web server running for prototyping.
-8.  **Healthy skepticism**: A "too good to be true" scenario often is. Rigorous testing and validation, maybe using Python's unittest or JavaScript's Jest, are essential.
+8.  **Healthy skepticism**: A "too good to be true" scenario often is. Rigorous testing and validation, maybe using Python's `unittest` or JavaScript's `Jest`, are essential.
 9.  **Type systems**: Even in dynamically typed languages like Python, type hinting (PEP 484) has gained traction. It improves readability and maintainability.
 10. **Art and science of coding**: This beautifully captures the essence of software development. It's not just about solving problems but about how elegantly and sustainably you solve them.
+
+[^note]: Put `import this` in your script/REPL to get this Easter Egg:
+
+```shell
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```

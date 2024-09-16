@@ -2,23 +2,23 @@
 
 Why do some languages die, and others survive?
 
--   [The History of Language](#the-history-of-language)
-    -   [Languages](#languages)
-        -   [Fortran (1957)](#fortran-1957)
-        -   [Lisp (1958)](#lisp-1958)
-        -   [COBOL (1959)](#cobol-1959)
-        -   [BASIC (1964)](#basic-1964)
-        -   [C (1972)](#c-1972)
-        -   [SQL (1974)](#sql-1974)
-        -   [C++ (1985)](#c-1985)
-        -   [Perl (1987)](#perl-1987)
-        -   [Python (1991)](#python-1991)
-        -   [Java (1995)](#java-1995)
-        -   [JavaScript (1995)](#javascript-1995)
-        -   [Ruby (1995)](#ruby-1995)
-        -   [PHP (1995)](#php-1995)
-        -   [C# (2000)](#c-2000)
-        -   [Rust (2015)](#rust-2015)
+- [The History of Language](#the-history-of-language)
+  - [Languages](#languages)
+    - [Fortran (1957)](#fortran-1957)
+    - [Lisp (1958)](#lisp-1958)
+    - [COBOL (1959)](#cobol-1959)
+    - [BASIC (1964)](#basic-1964)
+    - [C (1972)](#c-1972)
+    - [SQL (1974)](#sql-1974)
+    - [C++ (1985)](#c-1985)
+    - [Perl (1987)](#perl-1987)
+    - [Python (1991)](#python-1991)
+    - [Java (1995)](#java-1995)
+    - [JavaScript (1995)](#javascript-1995)
+    - [Ruby (1995)](#ruby-1995)
+    - [PHP (1995)](#php-1995)
+    - [C# (2000)](#c-2000)
+    - [Rust (2015)](#rust-2015)
 
 ## Languages
 
@@ -164,7 +164,7 @@ Still the dominant language for database querying, though languages like Python 
 
 ### C++ (1985)
 
-Introduced object-oriented programming to C, along with features like classes, inheritance, and polymorphism.
+Introduced object-oriented programming to C, with features like classes, inheritance, and polymorphism.
 
 ```cpp
 #include <iostream>
@@ -186,7 +186,7 @@ int main() {
 -   Memory Management: Like C, manual memory management can lead to errors.
 -   Verbose Syntax: Can lead to lengthy code for simple tasks.
 
-Began to see competition from Java in the late 1990s and 2000s, especially for enterprise applications, due to Java's platform independence and simpler memory management.
+Began to see competition from Java in the late 1990s and 2000s, especially for enterprise applications, due to Java's platform independence and simpler memory management. Rust is also a modern, memory-safe, high performance competitor. 
 
 ### Perl (1987)
 
@@ -274,8 +274,7 @@ console.log(`Hello, world! The answer to life is ${answer}`);
 -   Performance: Not as efficient for heavy computations as some other languages.
 -   Inconsistencies: Different browsers may interpret JavaScript slightly differently.
 
-Still dominant in web development, but frameworks like TypeScript offer more robust typing and tools,
-gaining popularity for larger projects.
+Still dominant in web development, but frameworks like TypeScript, which then transpile to JavaScript, offer more robust typing and tools, gaining popularity for larger projects.
 
 ### Ruby (1995)
 
@@ -361,7 +360,7 @@ fn main() {
 }
 ```
 
-**Strength**: Performance-critical applications, especially in systems programming.
+**Strength**: Performance-critical applications, especially in systems programming or servers.
 
 **Example**: A web browser or a simple operating system kernel. Rust's memory safety and performance make it ideal for such tasks.
 
